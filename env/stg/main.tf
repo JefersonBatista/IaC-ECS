@@ -4,3 +4,7 @@ module "stg" {
   name = "stg"
   role = "stg"
 }
+
+output "IP" {
+  value = module.stg.IP
+}
