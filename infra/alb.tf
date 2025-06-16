@@ -2,7 +2,7 @@ resource "aws_lb" "ecs_alb" {
   name               = "ecs-django"
   load_balancer_type = "application"
   security_groups    = [aws_security_group.alb.id]
-  subnets            = [module.vpc.public_subnets]
+  subnets            = module.vpc.public_subnets
 }
 
 resource "aws_lb_listener" "http" {
